@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sutra-blush: #E8D5D5;
+  --sutra-rose: #C9A9A6;
+  --sutra-cream: #FDF8F5;
+  --sutra-gold: #B76E79;
+  --sutra-charcoal: #5C4A4A;
+  --sutra-soft: #F5EDED;
+  --sutra-pearl: #FAF6F4;
+  --sutra-shadow: 0 4px 24px rgba(92, 74, 74, 0.08);
+  --sutra-shadow-lg: 0 20px 60px rgba(92, 74, 74, 0.12);
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  background-color: var(--sutra-pearl);
+  color: var(--sutra-charcoal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: "Cormorant Garamond", serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--sutra-gold);
+  outline-offset: 2px;
+}
+
+/* Product card */
+.product-card {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease, border-color 0.3s ease;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 24px 48px rgba(92, 74, 74, 0.14), 0 8px 24px rgba(183, 110, 121, 0.08);
+  border-color: rgba(183, 110, 121, 0.3);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(145deg, #5C4A4A 0%, #4a3a3a 100%);
+  box-shadow: 0 4px 14px rgba(92, 74, 74, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.btn-primary:hover {
+  box-shadow: 0 12px 32px rgba(183, 110, 121, 0.35), 0 4px 12px rgba(92, 74, 74, 0.15);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  border: 1.5px solid var(--sutra-blush);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.btn-secondary:hover {
+  background: var(--sutra-soft);
+  border-color: var(--sutra-rose);
+}
+
+/* Inputs */
+.input-sutra {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.input-sutra:focus {
+  border-color: var(--sutra-gold);
+  box-shadow: 0 0 0 3px rgba(183, 110, 121, 0.15);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+.animate-fade-in-up-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.animate-fade-in-up-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.animate-fade-in-up-delay-3 { animation-delay: 0.3s; opacity: 0; }
+
+/* Decorative line */
+.sutra-line {
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--sutra-gold), var(--sutra-rose));
+  border-radius: 1px;
+}
+
+/* Hero SUTRA — 3D واضح جداً + حركة لطيفة */
+@keyframes sutra-3d-float {
+  0%, 100% {
+    transform: perspective(600px) rotateX(-2deg) translateY(0) translateZ(0);
+  }
+  50% {
+    transform: perspective(600px) rotateX(-2deg) translateY(-8px) translateZ(12px);
+  }
+}
+.sutra-hero-3d {
+  animation: sutra-3d-float 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  perspective: 600px;
+}
+.sutra-hero-3d-visible {
+  opacity: 1;
+}
+/* تأثير 3D قوي: ظلال متعددة للعمق + highlight علوي */
+.sutra-hero-3d h1 {
+  color: #4a3c3c;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  /* طبقة ضوء علوية */
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.9),
+    0 2px 0 rgba(255,255,255,0.6),
+    0 3px 0 rgba(255,248,245,0.4),
+    /* ظلال العمق 3D */
+    0 4px 2px rgba(92,74,74,0.15),
+    0 6px 4px rgba(92,74,74,0.2),
+    0 8px 8px rgba(92,74,74,0.18),
+    0 12px 12px rgba(92,74,74,0.15),
+    0 16px 20px rgba(92,74,74,0.12),
+    0 20px 28px rgba(92,74,74,0.1),
+    0 24px 36px rgba(92,74,74,0.08),
+    0 2px 1px rgba(0,0,0,0.06);
+}

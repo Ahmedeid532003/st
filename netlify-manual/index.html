@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SUTRA — ملابس حريمى</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --sutra-blush: #E8D5D5;
+      --sutra-rose: #C9A9A9;
+      --sutra-cream: #FDF8F5;
+      --sutra-gold: #B76E79;
+      --sutra-charcoal: #5C4A4A;
+      --sutra-soft: #F5EDED;
+      --sutra-pearl: #FAF6F4;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Jost", sans-serif;
+      background: var(--sutra-pearl);
+      color: var(--sutra-charcoal);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .font-display { font-family: "Cormorant Garamond", serif; }
+    .hero {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      position: relative;
+      background: linear-gradient(180deg, rgba(232,213,213,0.6) 0%, rgba(253,248,245,0.8) 50%, var(--sutra-pearl) 100%);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(250,246,244,0.9) 0%, transparent 50%, rgba(232,213,213,0.3) 100%);
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; max-width: 36rem; margin: 0 auto; }
+    .hero-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--sutra-rose);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .hero-line {
+      width: 56px;
+      height: 3px;
+      background: var(--sutra-gold);
+      margin: 0 auto 2rem;
+      border-radius: 2px;
+    }
+    .hero-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(3rem, 12vw, 7rem);
+      font-weight: 700;
+      color: #4a3c3c;
+      letter-spacing: -0.02em;
+      text-shadow: 0 2px 0 rgba(255,255,255,0.5), 0 4px 12px rgba(92,74,74,0.08);
+      margin-bottom: 1.5rem;
+    }
+    .hero-desc {
+      font-size: 1.125rem;
+      color: rgba(92,74,74,0.75);
+      font-weight: 300;
+      max-width: 28rem;
+      margin: 0 auto;
+    }
+    .section {
+      padding: 4rem 1.5rem;
+      max-width: 72rem;
+      margin: 0 auto;
+    }
+    .section-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--sutra-charcoal);
+      margin-bottom: 0.5rem;
+    }
+    .section-desc { color: rgba(92,74,74,0.65); margin-bottom: 2rem; }
+    .card {
+      background: var(--sutra-soft);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 24px rgba(92,74,74,0.08);
+      margin-bottom: 1rem;
+    }
+    .card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--sutra-charcoal); }
+    .card p { font-size: 0.9rem; color: rgba(92,74,74,0.7); }
+    .link-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(145deg, #5C4A4A 0%, #4a3a3a 100%);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 500;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .link-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(92,74,74,0.2); }
+    .note {
+      background: rgba(232,213,213,0.4);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      font-size: 0.9rem;
+      color: var(--sutra-charcoal);
+      margin-top: 2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: rgba(92,74,74,0.6);
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="hero-label">ملابس حريمى</p>
+        <div class="hero-line"></div>
+        <h1 class="hero-title font-display">SUTRA</h1>
+        <p class="hero-desc">تشكيلة مختارة من الملابس الحريمى الأنيقة — أناقة وراحة</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">مرحباً بك في SUTRA</h2>
+      <p class="section-desc">هذه الصفحة للنشر اليدوي على Netlify (سحب المجلد). الموقع الكامل يعمل عند الربط مع GitHub.</p>
+
+      <div class="card">
+        <h3>الرئيسية</h3>
+        <p>الصفحة الرئيسية مع المنتجات والأقسام.</p>
+        <a href="/" class="link-btn">الرئيسية</a>
+      </div>
+      <div class="card">
+        <h3>السلة</h3>
+        <p>عرض السلة وإتمام الطلب.</p>
+        <a href="/cart" class="link-btn">السلة</a>
+      </div>
+      <div class="card">
+        <h3>طلباتي</h3>
+        <p>تتبع الطلبات برقم الموبايل.</p>
+        <a href="/my-orders" class="link-btn">طلباتي</a>
+      </div>
+
+      <div class="note">
+        <strong>ملاحظة:</strong> النشر اليدوي يعرض هذه الصفحة الثابتة فقط. لعرض الموقع الكامل (منتجات، سلة، طلبات، أدمن) اربط المشروع من GitHub في Netlify بدلاً من السحب اليدوي.
+      </div>
+    </section>
+
+    <footer>
+      SUTRA — ملابس حريمى
+    </footer>
+  </main>
+</body>
+</html>

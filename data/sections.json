@@ -1,0 +1,14 @@
+[
+  {
+    "id": "sec-1",
+    "name": "New Arrivals",
+    "nameAr": "وصل حديثاً",
+    "order": 1
+  },
+  {
+    "id": "sec-2",
+    "name": "Best Sellers",
+    "nameAr": "الأكثر مبيعاً",
+    "order": 2
+  }
+]

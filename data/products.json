@@ -1,0 +1,138 @@
+[
+  {
+    "id": "prod-1",
+    "name": "Elegant Blouse",
+    "nameAr": "بلوزة أنيقة",
+    "description": "Comfortable blouse for daily wear.",
+    "descriptionAr": "بلوزة مريحة للارتداء اليومي.",
+    "price": 299,
+    "originalPrice": 349,
+    "category": "Blouses",
+    "categoryAr": "بلوزات",
+    "images": [
+      "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=400"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "أبيض",
+      "أسود",
+      "بيج"
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "أبيض",
+        "quantity": 5
+      },
+      {
+        "size": "S",
+        "color": "أسود",
+        "quantity": 3
+      },
+      {
+        "size": "M",
+        "color": "أبيض",
+        "quantity": 7
+      },
+      {
+        "size": "M",
+        "color": "بيج",
+        "quantity": 4
+      },
+      {
+        "size": "L",
+        "color": "أسود",
+        "quantity": 2
+      }
+    ],
+    "sectionId": "sec-1",
+    "createdAt": "2024-01-15T10:00:00.000Z",
+    "isActive": true
+  },
+  {
+    "id": "prod-2",
+    "name": "Summer Dress",
+    "nameAr": "فستان صيفي",
+    "description": "Light dress for summer.",
+    "descriptionAr": "فستان خفيف للصيف.",
+    "price": 449,
+    "originalPrice": 499,
+    "category": "Dresses",
+    "categoryAr": "فساتين",
+    "images": [
+      "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "أزرق",
+      "وردي",
+      "أبيض"
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "أزرق",
+        "quantity": 4
+      },
+      {
+        "size": "M",
+        "color": "وردي",
+        "quantity": 6
+      },
+      {
+        "size": "L",
+        "color": "أبيض",
+        "quantity": 3
+      }
+    ],
+    "sectionId": "sec-2",
+    "createdAt": "2024-01-16T10:00:00.000Z",
+    "isActive": true
+  },
+  {
+    "id": "prod-3",
+    "name": "Casual Top",
+    "nameAr": "توب كاجوال",
+    "description": "Easy casual top.",
+    "descriptionAr": "توب كاجوال مريح.",
+    "price": 199,
+    "category": "Tops",
+    "categoryAr": "تيشيرتات وتوب",
+    "images": [
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "رمادي",
+      "أبيض"
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "color": "رمادي",
+        "quantity": 8
+      },
+      {
+        "size": "M",
+        "color": "أبيض",
+        "quantity": 10
+      }
+    ],
+    "sectionId": "sec-1",
+    "createdAt": "2024-01-17T10:00:00.000Z",
+    "isActive": false
+  }
+]

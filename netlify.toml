@@ -3,6 +3,12 @@
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
+=======
+  NPM_FLAGS = "--legacy-peer-deps"
+  CI = "true"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+>>>>>>> 6db3510 (إضافة بيانات افتراضية لظهور الموقع كامل على Netlify)
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
