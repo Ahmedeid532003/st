@@ -22,6 +22,9 @@ sutra-project-full.zip
 .DS_Store
 *.pem
 
+# build logs
+build-log.txt
+
 # debug
 npm-debug.log*
 yarn-debug.log*
