@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -12,15 +12,19 @@ export default function AdminDashboardLayout({
   const pathname = usePathname();
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
+  const hasRedirected = useRef(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
   useEffect(() => {
-    if (!mounted) return;
-    const ok = sessionStorage.getItem("stella_admin");
-    if (!ok) router.replace("/admin");
+    if (!mounted || hasRedirected.current) return;
+    const ok = sessionStorage.getItem("sutra_admin");
+    if (!ok) {
+      hasRedirected.current = true;
+      router.replace("/admin");
+    }
   }, [mounted, router]);
 
   if (!mounted) {
@@ -44,7 +48,7 @@ export default function AdminDashboardLayout({
       <header className="bg-white border-b border-sutra-blush/50 sticky top-0 z-40">
         <div className="max-w-5xl mx-auto px-4 flex items-center justify-between h-14">
           <Link href="/admin/dashboard" className="font-display text-xl font-semibold text-sutra-charcoal">
-            Stella — الأدمن
+            SUTRA — الأدمن
           </Link>
           <nav className="flex gap-4">
             {nav.map(({ href, label }) => (
@@ -60,7 +64,7 @@ export default function AdminDashboardLayout({
           <button
             type="button"
             onClick={() => {
-              sessionStorage.removeItem("stella_admin");
+              sessionStorage.removeItem("sutra_admin");
               router.push("/admin");
             }}
             className="text-sm text-sutra-charcoal/70 hover:text-sutra-gold"

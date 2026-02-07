@@ -25,7 +25,7 @@ export default function ProductCard({ product, priority, sectionName }: ProductC
   const hasImage = imageUrl && (imageUrl.startsWith("http") || imageUrl.startsWith("/") || imageUrl.startsWith("data:"));
 
   return (
-    <Link href={`/product/${product.id}`} className="block group">
+    <Link href={`/product/${product.id}`} prefetch={false} className="block group">
       <article className="product-card overflow-hidden bg-white border-2 border-sutra-blush/50 shadow-[0_8px_30px_rgba(92,74,74,0.08)]">
         <div className="aspect-[3/4] relative bg-sutra-soft overflow-hidden">
           {hasImage ? (

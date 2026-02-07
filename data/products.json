@@ -156,5 +156,16 @@
     "isActive": true,
     "id": "ef9cbb7b-47d6-4af4-86d2-032c061a7dcc",
     "createdAt": "2026-02-07T03:02:29.514Z"
+  },
+  {
+    "name": "hiud",
+    "description": "",
+    "price": 0,
+    "category": "فستان",
+    "categoryAr": "فستان",
+    "images": [],
+    "isActive": true,
+    "id": "836db567-c565-4762-87a3-054a07d15069",
+    "createdAt": "2026-02-07T17:28:11.528Z"
   }
 ]

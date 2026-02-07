@@ -788,7 +788,7 @@ export default function AdminProductsPage() {
                     unoptimized
                   />
                 ) : (
-                  <span className="absolute inset-0 flex items-center justify-center text-sutra-rose/50 text-xs">Stella</span>
+                  <span className="absolute inset-0 flex items-center justify-center text-sutra-rose/50 text-xs">SUTRA</span>
                 )}
               </div>
               <div className="flex-1 min-w-0">

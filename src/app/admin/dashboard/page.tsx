@@ -1,21 +1,30 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 export default function AdminDashboardHome() {
   const [counts, setCounts] = useState({ products: 0, orders: 0 });
+  const fetched = useRef(false);
 
   useEffect(() => {
+    if (fetched.current) return;
+    fetched.current = true;
+    const ac = new AbortController();
     Promise.all([
-      fetch("/api/admin/products").then((r) => r.json()),
-      fetch("/api/admin/orders").then((r) => r.json()),
-    ]).then(([products, orders]) => {
-      setCounts({
-        products: Array.isArray(products) ? products.length : 0,
-        orders: Array.isArray(orders) ? orders.length : 0,
+      fetch("/api/admin/products", { signal: ac.signal }).then((r) => r.ok ? r.json() : []).catch(() => []),
+      fetch("/api/admin/orders", { signal: ac.signal }).then((r) => r.ok ? r.json() : []).catch(() => []),
+    ])
+      .then(([products, orders]) => {
+        setCounts({
+          products: Array.isArray(products) ? products.length : 0,
+          orders: Array.isArray(orders) ? orders.length : 0,
+        });
+      })
+      .catch(() => {
+        setCounts({ products: 0, orders: 0 });
       });
-    });
+    return () => ac.abort();
   }, []);
 
   return (
